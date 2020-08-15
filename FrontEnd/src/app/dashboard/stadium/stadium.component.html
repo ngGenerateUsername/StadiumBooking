@@ -1,0 +1,93 @@
+<app-left-navbar></app-left-navbar>
+<div class="py-5">
+
+ <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">   ADD NEW STADIUM ON THE LIST     </h2>
+                                <div *ngIf="success" class="text-center text-success">{{success}} <a routerLink="/dashboard/stadium" class="text-primary checkList">check List</a> </div>
+                                <div class="page-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a routerLink="/dashboard" class="breadcrumb-link">Dashboard</a></li>
+                                            <li class="breadcrumb-item">Stadium</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Add Stadium</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+<div class="container">
+
+
+
+    <form [formGroup]="stadiumForm">
+<div class="row">
+        <div class="group">      
+          <input type="text" formControlName="sport" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>SPORT</label>
+        </div>
+          
+        <div class="group ml-5">      
+          <input type="text" formControlName="MinPlayer" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Min Number Of Player</label>
+        </div>
+        
+        <div class="group ml-5">      
+            <input type="text" formControlName="MaxPlayer" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Max Number Of Player</label>
+          </div>
+</div>
+          <div class="group">      
+            <input type="number" formControlName="price" step="0.1" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>PRICE (Per Player) DT</label>
+          </div>
+<div class="row">
+          <div class="group">      
+            <input type="time" formControlName="openHeure" required >
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label class="ForDate">Open</label>
+          </div>
+
+          <div class="group ml-5">      
+            <input type="time" formControlName="closeHeure" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label class="ForDate">Close</label>
+          </div>
+</div>
+
+<div class="group">      
+    <input type="number" formControlName="surface" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Surface M&#178; </label>
+  </div>
+
+  <div class="group">
+      <button style="margin-left:80%" [disabled]="!stadiumForm.valid" (click)="onSubmit()" class="btn btn-outline-primary rounded">ADD</button>
+  </div>
+      </form>
+
+    
+</div>
+
+</div>

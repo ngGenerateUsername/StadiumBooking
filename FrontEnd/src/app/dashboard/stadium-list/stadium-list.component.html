@@ -1,0 +1,101 @@
+<app-left-navbar></app-left-navbar>
+<div class="py-5">
+<div class="dashboard-wrapper">
+    <div class="dashboard-ecommerce">
+        <div class="container-fluid dashboard-content ">
+            <!-- ============================================================== -->
+            <!-- pageheader  -->
+            <!-- ============================================================== -->
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="page-header">
+                        <h2 class="pageheader-title">   STADIUMS LIST     </h2>
+                    
+                        <div class="page-breadcrumb">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a routerLink="/dashboard" class="breadcrumb-link">Dashboard</a></li>
+                                    <li class="breadcrumb-item">Stadium</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Stadium List</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+        <div class="card container">
+            <h5 class="card-header">Stadium List</h5>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="bg-light">
+                            <tr class="border-0">
+                                
+                                <th class="border-0">Sport</th>
+                                <th class="border-0">MinPlayer</th>
+                                <th class="border-0">MaxPlayer</th>
+                                <th class="border-0">Price</th>
+                                <th class="border-0">Opening Time </th>
+                                <th class="border-0">Closing Time</th>
+                                <th class="border-0">Surface</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                         
+                            <tr *ngFor="let stadium of listStadium">
+
+                                <td>{{stadium.sport}}</td>
+                                <td>{{stadium.MinPlayer}}</td>
+                               <td> {{stadium.MaxPlayer}} </td>
+                               <td> {{stadium.Price}} </td>
+                               <td> {{stadium.openHeure}} </td>
+                               <td> {{stadium.closeHeure}} </td>
+                               <td> {{stadium.surface}} </td>
+
+                            </tr>
+                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    
+    <!-- ============================================================== -->
+    <!-- end recent orders  -->
+
+
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- customer acquistion  -->
+    <!-- ============================================================== -->
+
+    <!-- ============================================================== -->
+    <!-- end customer acquistion  -->
+    <!-- ============================================================== -->
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
